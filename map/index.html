@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="ol.css" type="text/css">
+    <style>
+      .map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+    <script src="ol.js"></script>
+    <title>OpenLayers example</title>
+  </head>
+  <body>
+    <h2>My Map</h2>
+    <div id="map" class="map"></div>
+    <script type="text/javascript">
+
+
+      var source = new ol.source.XYZ({
+        //url: 'https://{a-c}.tiles.mapbox.com/v3/mapbox.blue-marble-topo-jan/{z}/{x}/{y}.png'
+        url: 'http://www.gitzmansgallery.com/tiles/{z}_{x}_{y}.jpg'
+      });
+
+      var map = new ol.Map({
+        target: 'map',
+        layers: [
+          //new ol.layer.Tile({source: new ol.source.OSM()})
+           new ol.layer.Tile({            source: source          })        
+          ],
+        view: new ol.View({
+          center: ol.proj.fromLonLat([37.41, 8.82]),
+          zoom: 4
+        })
+      });
+    </script>
+  </body>
+</html>
