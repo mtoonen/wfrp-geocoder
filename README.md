@@ -10,6 +10,7 @@ Attempt to make a searchable WFRP map. Used the awesome map from http://www.gitz
 - Postprocess json 
   - add x/y worldcoordinates based on imageposition
   - remove weird characters: ), (, etc.
+  - use dictionary to complete common words?
 - Add to geocoder (solr?)
 - Make map from 0 listen to answers from 5
   
